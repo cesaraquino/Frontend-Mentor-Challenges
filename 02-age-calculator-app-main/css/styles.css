@@ -1,0 +1,182 @@
+:root {
+  --purple: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+
+  --ff: "Poppins", sans-serif;
+  --fz-inputs-d: 32px;
+  --fz-inputs-m: 20px;
+  --fz-age-d: 88px;
+  --fz-age-m: 55px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff);
+  background-color: var(--light-grey);
+  color: var(--off-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.invalid {
+  color: var(--light-red);
+}
+
+.invalid .agecalc-input {
+  border-color: var(--light-red);
+}
+
+.error-message {
+  display: none;
+  font-style: italic;
+}
+
+.error-message.show {
+  display: block;
+}
+
+.agecalc-content {
+  width: 842px;
+  padding: 60px;
+  background-color: var(--white);
+  border-radius: 35px 35px 200px;
+}
+
+.agecalc-inputs {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.agecalc-inputs label {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+}
+
+.agecalc-inputs b {
+  letter-spacing: 3px;
+  margin-bottom: 5px;
+}
+
+.agecalc-input {
+  font-size: var(--fz-inputs-d);
+  line-height: 72px;
+  border-radius: 8px;
+  border: 1px solid var(--light-grey);
+  font-weight: 800;
+  padding: 0 20px;
+  margin-bottom: 8px;
+  width: 160px;
+  outline: 0;
+}
+
+.agecalc-input:hover,
+.agecalc-input:focus {
+  border-color: var(--purple);
+}
+
+.agecalc-inputs b {
+  text-transform: uppercase;
+}
+
+.agecalc-separator {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.agecalc-separator hr {
+  border-top: 1px solid var(--light-grey);
+  width: 100%;
+}
+
+.agecalc-button {
+  padding: 26px 27px;
+  border: 0;
+  border-radius: 50%;
+  background-color: var(--purple);
+  cursor: pointer;
+}
+
+.agecalc-button:hover {
+  background-color: var(--off-black);
+}
+
+.agecalc-age {
+  list-style: none;
+}
+
+.agecalc-age li {
+  margin-bottom: 15px;
+  font-size: var(--fz-age-d);
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1;
+}
+
+.agecalc-age li:last-child {
+  margin-bottom: 0;
+}
+
+.agecalc-age span {
+  color: var(--purple);
+}
+
+@media (max-width: 842px) {
+  .agecalc-content {
+    width: 98%;
+    padding: 50px 25px;
+    border-radius: 25px 25px 100px;
+  }
+
+  .agecalc-inputs {
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+
+  .agecalc-inputs label {
+    font-size: 12px;
+  }
+
+  .agecalc-input {
+    font-size: var(--fz-inputs-m);
+    width: 100%;
+    height: 54px;
+  }
+
+  .agecalc-age li {
+    font-size: var(--fz-age-m);
+  }
+
+  .agecalc-separator {
+    height: 64px;
+    margin-bottom: 30px;
+  }
+
+  .agecalc-button {
+    position: absolute;
+    padding: 0;
+    height: 64px;
+    width: 64px;
+    left: 50%;
+    margin-left: -32px;
+  }
+
+  .agecalc-button img {
+    width: 24px;
+  }
+}
