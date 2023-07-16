@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+  </head>
+  <body>
+    <main class="card-content">
+      <div class="card-images">
+        <div class="card-front">
+          <img src="images/card-logo.svg" alt="Card Logo" class="card-logo" />
+          <div class="card-front-details">
+            <p class="card-number">0000 0000 0000 0000</p>
+            <p class="card-user-expire">
+              <span class="card-user">Jane Appleseed</span>
+              <span class="card-expire">
+                <span class="card-expire-m">00</span>
+                /
+                <span class="card-expire-y">00</span>
+              </span>
+            </p>
+          </div>
+        </div>
+        <div class="card-back"><p class="card-cvc">000</p></div>
+      </div>
+      <div class="card-details">
+        <form class="card-form">
+          <div class="card-field">
+            <label>Cardholder name</label>
+            <input
+              type="text"
+              name="name"
+              class="card-input"
+              placeholder="e.g. Jane Appleseed" />
+            <span class="error-message">This field is required</span>
+          </div>
+          <div class="card-field">
+            <label>Card Number</label>
+            <input
+              type="text"
+              name="number"
+              class="card-input"
+              placeholder="e.g. 1234 5678 9100 0000"
+              maxlength="19" />
+            <span class="error-message">Wrong format, numbers only</span>
+          </div>
+          <div class="card-field-x2">
+            <div class="card-field">
+              <label>Exp. Date (mm/yy)</label>
+              <div class="card-date-expire">
+                <div class="card-month">
+                  <input
+                    type="text"
+                    name="month"
+                    class="card-input"
+                    placeholder="MM"
+                    maxlength="2" />
+                  <span class="error-message">Can't be blank</span>
+                </div>
+                <div class="card-year">
+                  <input
+                    type="text"
+                    name="year"
+                    class="card-input"
+                    placeholder="YY"
+                    maxlength="2" />
+                  <span class="error-message">Can't be blank</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-field">
+              <label>CVC</label>
+              <input
+                type="text"
+                name="cvc"
+                class="card-input"
+                placeholder="e.g. 123"
+                maxlength="3" />
+              <span class="error-message">Can't be blank</span>
+            </div>
+          </div>
+          <button id="button-submit" type="submit" class="card-button" disabled>
+            Confirm
+          </button>
+        </form>
+        <div class="card-confirm hide">
+          <img src="images/icon-complete.svg" alt="Complete!" />
+          <h2>Thank You!</h2>
+          <p>We've added your card details</p>
+          <button id="button-continue" class="card-button">Continue</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+    <script src="js/app.js"></script>
+  </body>
+</html>

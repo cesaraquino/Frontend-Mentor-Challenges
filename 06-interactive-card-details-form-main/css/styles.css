@@ -1,0 +1,360 @@
+:root {
+  /* Primary */
+
+  --linear-gradient: hsl(249, 99%, 64%), hsl(278, 94%, 30%);
+  --red: hsl(0, 100%, 66%);
+
+  /* Neutral */
+
+  --white: hsl(0, 0%, 100%);
+  --light-grayish-violet: hsl(270, 3%, 87%);
+  --dark-grayish-violet: hsl(279, 6%, 55%);
+  --very-dark-violet: hsl(278, 68%, 11%);
+
+  /* Typography */
+  --ff: "Space Grotesk", sans-serif;
+  --fz: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff);
+  font-size: var(--fz);
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 40% 100%;
+}
+
+.hide {
+  display: none !important;
+}
+
+.card-content {
+  width: 1048px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-images {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 50%;
+}
+
+.card-front,
+.card-back {
+  width: 447px;
+  height: 245px;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-shadow: 15px 20px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+}
+
+.card-front {
+  background-image: url("../images/bg-card-front.png");
+  padding: 30px;
+  justify-content: space-between;
+}
+
+.card-logo {
+  width: 84px;
+}
+
+.card-number {
+  font-size: 30px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.card-user-expire {
+  align-self: flex-end;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.card-expire {
+  display: flex;
+  gap: 1px;
+}
+
+.card-back {
+  background-image: url("../images/bg-card-back.png");
+  align-items: flex-end;
+  justify-content: center;
+  padding-right: 60px;
+  align-self: flex-end;
+}
+
+.card-cvc {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.card-details,
+.card-form,
+.card-field,
+.card-confirm {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-details {
+  justify-content: center;
+  width: 37%;
+}
+
+.card-field {
+  margin-bottom: 20px;
+}
+
+.card-field label {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+}
+
+.card-input {
+  font-size: var(--fz);
+  font-family: var(--ff);
+  height: 46px;
+  border-radius: 8px;
+  border: 1px solid var(--light-grayish-violet);
+  padding: 0 13px;
+  outline: 0;
+}
+
+.card-input::placeholder {
+  color: var(--light-grayish-violet);
+  opacity: 1;
+}
+
+.card-input:focus {
+  border: 1px solid var(--very-dark-violet);
+}
+
+.card-field-x2 {
+  display: flex;
+  gap: 20px;
+}
+
+.card-field-x2 .card-field {
+  width: 50%;
+}
+
+.card-date-expire {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.card-date-expire .card-input {
+  width: 100%;
+}
+
+.card-month,
+.card-year {
+  width: 50%;
+}
+
+.card-button {
+  border: 0;
+  border-radius: 8px;
+  color: var(--white);
+  height: 54px;
+  background-color: var(--very-dark-violet);
+  font-size: 16px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-weight: 500;
+  font-family: var(--ff);
+  width: 100%;
+}
+
+.card-button:disabled {
+  cursor: not-allowed;
+}
+
+.card-button:hover {
+  background: linear-gradient(var(--linear-gradient));
+}
+
+.error .error-message {
+  display: block;
+}
+
+.error .card-input {
+  border-color: var(--red);
+}
+
+.error-message {
+  color: var(--red);
+  font-size: 12px;
+  padding-top: 5px;
+  display: none;
+}
+
+.card-confirm {
+  width: 388px;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-confirm img {
+  margin-bottom: 35px;
+}
+
+.card-confirm h2 {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+.card-confirm p {
+  margin-bottom: 45px;
+  color: var(--dark-grayish-violet);
+}
+
+@media (max-width: 1048px) {
+  .card-content {
+    width: 95%;
+  }
+}
+
+@media (max-width: 810px) {
+  body {
+    background-image: url("../images/bg-main-mobile.png");
+    background-size: contain;
+  }
+
+  .card-content {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .card-images {
+    width: 100%;
+    position: relative;
+    margin-bottom: 50px;
+    padding-top: 140px;
+  }
+
+  .card-front {
+    z-index: 1;
+    position: relative;
+  }
+
+  .card-back {
+    position: absolute;
+    transform: translateY(-140px);
+  }
+
+  .card-details,
+  .card-confirm {
+    width: 100%;
+  }
+}
+
+@media (max-width: 472px) {
+  body {
+    align-items: flex-start;
+  }
+
+  .card-content {
+    padding-top: 30px;
+    width: 90%;
+  }
+
+  .card-images {
+    padding-top: 101px;
+  }
+
+  .card-front,
+  .card-back {
+    width: 324px;
+    height: 178px;
+  }
+
+  .card-front {
+    padding: 15px;
+  }
+
+  .card-logo {
+    width: 50px;
+  }
+
+  .card-number {
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+
+  .card-user-expire,
+  .card-cvc {
+    font-size: 13px;
+  }
+
+  .card-back {
+    padding-right: 40px;
+    transform: translateY(-101px);
+  }
+}
+
+@media (max-width: 375px) {
+  .card-content {
+    width: 375px;
+    padding: 30px 15px;
+  }
+
+  .card-images {
+    padding-top: 90px;
+  }
+
+  .card-front,
+  .card-back {
+    width: 286px;
+    height: 157px;
+  }
+
+  .card-number {
+    font-size: 20px;
+  }
+
+  .card-user-expire,
+  .card-cvc {
+    font-size: 11px;
+  }
+
+  .card-back {
+    transform: translateY(-90px);
+  }
+
+  .card-field-x2 {
+    gap: 12px;
+  }
+
+  .card-date-expire {
+    gap: 8px;
+  }
+}
