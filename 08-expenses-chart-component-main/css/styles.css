@@ -1,0 +1,214 @@
+:root {
+  /* Primary */
+
+  --soft-red: hsl(10, 79%, 65%);
+  --cyan: hsl(186, 34%, 60%);
+
+  /* Neutral */
+
+  --dark-brown: hsl(25, 47%, 15%);
+  --medium-brown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --very-pale-orange: hsl(33, 100%, 98%);
+
+  /* Typography */
+  --ff: "DM Sans", sans-serif;
+  --fz: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  background-color: var(--cream);
+  color: var(--medium-brown);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--ff);
+  font-size: var(--fz);
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h4 {
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+p {
+  margin: 0;
+}
+
+.show {
+  display: block !important;
+  z-index: 1;
+}
+
+.expenses-content {
+  width: 540px;
+}
+
+.expenses-balance {
+  align-items: center;
+  background-color: var(--soft-red);
+  border-radius: 20px;
+  color: var(--very-pale-orange);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 35px;
+}
+
+.expenses-detail {
+  background-color: var(--very-pale-orange);
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.expenses-detail h2 {
+  color: var(--dark-brown);
+  margin-bottom: 15px;
+}
+
+.expenses-chart {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.chart-col {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 235px;
+  justify-content: flex-end;
+  width: 14.29%;
+}
+
+.chart-col.active .chart-bar {
+  background-color: var(--cyan);
+}
+
+.chart-col.active .chart-bar:hover {
+  background-color: #bbdde4;
+}
+
+.chart-amount {
+  background-color: var(--dark-brown);
+  border-radius: 7px;
+  color: var(--cream);
+  display: none;
+  font-weight: 700;
+  left: 50%;
+  padding: 8px;
+  position: absolute;
+  top: -46px;
+  transform: translateX(-50%);
+}
+
+.chart-bar {
+  background-color: var(--soft-red);
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.chart-bar:hover {
+  background-color: #f29f88;
+}
+
+.chart-bar:hover .chart-amount {
+  display: block;
+}
+
+.chart-day {
+  font-size: 15px;
+}
+
+.expenses-month {
+  align-items: flex-end;
+  border-top: 1px solid var(--medium-brown);
+  display: flex;
+  justify-content: space-between;
+  padding-top: 35px;
+}
+
+.expenses-total h1 {
+  color: var(--dark-brown);
+  font-size: 45px;
+  line-height: 1;
+}
+
+.expenses-percent {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+
+.expenses-percent h3 {
+  color: var(--dark-brown);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@media (max-width: 540px) {
+  body {
+    font-size: 15px;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  .expenses-content {
+    max-width: 375px;
+  }
+
+  .expenses-balance,
+  .expenses-detail {
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .expenses-balance {
+    margin-bottom: 15px;
+  }
+
+  .expenses-chart {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .expenses-month {
+    padding-top: 25px;
+  }
+
+  .expenses-total h1 {
+    font-size: 30px;
+  }
+
+  .expenses-percent h3 {
+    font-size: 15px;
+  }
+}
