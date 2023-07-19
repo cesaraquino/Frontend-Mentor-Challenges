@@ -1,0 +1,97 @@
+:root {
+  /* Colors */
+
+  --almost-white: hsl(0, 0%, 98%);
+  --medium-gray: hsl(0, 0%, 41%);
+  --almost-black: hsl(0, 0%, 8%);
+
+  /* Typography */
+
+  --ff: "Epilogue", sans-serif;
+  --fz-d: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff);
+  font-size: var(--fz-d);
+  font-weight: 500;
+}
+
+.fs-1 {
+  font-size: 2rem !important;
+}
+
+.btn-link {
+  color: var(--medium-gray);
+  text-decoration: none;
+}
+
+.btn-link:hover {
+  color: var(--almost-black);
+}
+
+.btn-outline-primary {
+  border-color: var(--medium-gray);
+  color: var(--medium-gray);
+}
+
+.btn-outline-primary:hover {
+  background-color: transparent;
+  border-color: var(--almost-black);
+  color: var(--almost-black);
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.btn-dark:hover {
+  background-color: transparent;
+  color: var(--almost-black);
+}
+
+.dropdown-toggle::after {
+  background-image: url("../images/icon-arrow-down.svg");
+  border: 0;
+  height: 6px;
+  vertical-align: middle;
+  width: 10px;
+}
+
+.dropdown-toggle.show::after {
+  background-image: url("../images/icon-arrow-up.svg");
+}
+
+@media (min-width: 576px) {
+  .fs-1 {
+    font-size: 2.5rem !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .fs-1 {
+    font-size: 3rem !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .fs-1 {
+    font-size: 3.5rem !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .fs-1 {
+    font-size: 5rem !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .fs-1 {
+    font-size: 6rem !important;
+  }
+}
