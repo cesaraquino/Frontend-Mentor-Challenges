@@ -1,0 +1,271 @@
+:root {
+  /* ## Colors
+
+  ### Primary */
+
+  --blue: hsl(246, 80%, 60%);
+  --light-red-work: hsl(15, 100%, 70%);
+  --light-red-study: hsl(348, 100%, 68%);
+  --soft-blue-play: hsl(195, 74%, 62%);
+  --lime-green-exercise: hsl(145, 58%, 55%);
+  --violet-social: hsl(264, 64%, 52%);
+  --soft-orange-self-care: hsl(43, 84%, 65%);
+
+  /* ### Neutral */
+
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+
+  /* Typography */
+  --ff: "Rubik", sans-serif;
+  --fz: 18px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background-color: var(--very-dark-blue);
+  color: var(--pale-blue);
+  display: flex;
+  font-family: var(--ff);
+  font-size: var(--fz);
+  gap: 30px;
+  height: 100vh;
+  justify-content: center;
+}
+
+.db-content {
+  display: flex;
+  gap: 30px;
+  width: 1110px;
+}
+
+.db-user-time {
+  background-color: var(--dark-blue);
+  border-radius: 15px;
+  width: 255px;
+}
+
+.db-user {
+  background-color: var(--blue);
+  border-radius: 15px;
+  padding: 30px 30px 85px;
+}
+
+.db-user-avatar {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  height: 82px;
+  margin-bottom: 40px;
+  width: 82px;
+}
+
+.db-user h5 {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 7px;
+}
+
+.db-user-name {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.db-time {
+  list-style: none;
+  padding: 30px;
+}
+
+.db-time li {
+  margin-bottom: 25px;
+}
+
+.db-time li:last-child {
+  margin-bottom: 0;
+}
+
+.db-time a {
+  color: var(--desaturated-blue);
+  text-decoration: none;
+}
+
+.db-time a:hover,
+.db-time a.active {
+  color: #fff;
+}
+
+.db-activities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 825px;
+}
+
+.db-activity {
+  background-position: 90% -7px;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 46px;
+  width: 255px;
+}
+
+.db-activity-work {
+  background-color: var(--light-red-work);
+  background-image: url("../images/icon-work.svg");
+}
+
+.db-activity-play {
+  background-color: var(--soft-blue-play);
+  background-image: url("../images/icon-play.svg");
+}
+
+.db-activity-study {
+  background-color: var(--light-red-study);
+  background-image: url("../images/icon-study.svg");
+}
+
+.db-activity-exercise {
+  background-color: var(--lime-green-exercise);
+  background-image: url("../images/icon-exercise.svg");
+  background-position-y: 0;
+}
+
+.db-activity-social {
+  background-color: var(--violet-social);
+  background-image: url("../images/icon-social.svg");
+}
+
+.db-activity-selfcare {
+  background-color: var(--soft-orange-self-care);
+  background-image: url("../images/icon-self-care.svg");
+}
+
+.db-activity-info {
+  background-color: var(--dark-blue);
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.db-activity-info:hover {
+  background-color: #383d78;
+  cursor: pointer;
+}
+
+.db-activity-name {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.db-activity-name h3 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.db-activity-hours {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.db-activity-summary {
+  font-size: 15px;
+}
+
+@media (max-width: 1110px) {
+  .db-content {
+    width: 825px;
+  }
+
+  .db-activities {
+    width: 540px;
+  }
+}
+
+@media (max-width: 825px) {
+  body {
+    align-items: flex-start;
+    padding: 25px;
+  }
+
+  .db-content {
+    flex-direction: column;
+    gap: 25px;
+    max-width: 540px;
+  }
+
+  .db-user-time {
+    width: 100%;
+  }
+
+  .db-time {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+  }
+
+  .db-user {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    padding-bottom: 30px;
+  }
+
+  .db-user-avatar {
+    height: 70px;
+    margin-bottom: 0;
+    width: 70px;
+  }
+
+  .db-user-name {
+    font-size: 28px;
+    font-weight: 400;
+  }
+
+  .db-time li {
+    margin-bottom: 0;
+  }
+
+  .db-activities {
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 25px;
+    width: 100%;
+  }
+
+  .db-activity {
+    width: 100%;
+  }
+
+  .db-activity-name {
+    margin-bottom: 10px;
+  }
+
+  .db-activity-hs {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .db-activity-hours {
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+}

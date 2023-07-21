@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+  </head>
+  <body>
+    <main class="db-content">
+      <aside class="db-user-time">
+        <div class="db-user">
+          <img
+            src="images/image-jeremy.png"
+            alt="Jeremy"
+            class="db-user-avatar" />
+          <div class="db-user-captionn">
+            <h5>Report for</h5>
+            <h1 class="db-user-name">Jeremy Robson</h1>
+          </div>
+        </div>
+        <ul class="db-time">
+          <li>
+            <a class="db-time-link" href="#" data-timeframe="daily">Daily</a>
+          </li>
+          <li>
+            <a class="db-time-link" href="#" data-timeframe="weekly">Weekly</a>
+          </li>
+          <li>
+            <a class="db-time-link" href="#" data-timeframe="monthly">
+              Monthly
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <section class="db-activities"></section>
+    </main>
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+    <script src="js/app.js"></script>
+  </body>
+</html>
