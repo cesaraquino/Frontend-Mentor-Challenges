@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+  </head>
+  <body>
+    <main class="container">
+      <header class="page-logo">
+        <img src="./images/logo.svg" alt="Logo" />
+      </header>
+      <figure class="page-image">
+        <picture>
+          <source
+            srcset="./images/hero-mobile.jpg"
+            media="(max-width: 820px)" />
+          <img src="./images/hero-desktop.jpg" alt="Image" />
+        </picture>
+      </figure>
+      <section class="page-detail">
+        <h1>
+          <span>We're</span>
+          coming soon
+        </h1>
+        <p>
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </p>
+        <form class="form-subscribe">
+          <div class="form-controls">
+            <input
+              class="input-email"
+              type="email"
+              name="email"
+              placeholder="Email Address" />
+            <p class="error-message">Please, provide a valid email</p>
+            <button class="button-subscribe" type="submit" disabled>
+              <img src="./images/icon-arrow.svg" alt="Subscribe" />
+            </button>
+          </div>
+        </form>
+        <div class="form-success hide">
+          <h2>Thank you!</h2>
+          <p>We will contact you soon</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer> -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>
