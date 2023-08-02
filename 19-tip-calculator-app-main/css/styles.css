@@ -90,6 +90,7 @@ button:hover {
   align-items: stretch;
   background-color: var(--white);
   border-radius: 25px;
+  box-shadow: 0 0 30px rgba(27, 71, 77, 0.1);
   display: flex;
   gap: 50px;
   justify-content: space-between;
