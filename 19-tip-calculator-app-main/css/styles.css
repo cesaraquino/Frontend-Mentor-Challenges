@@ -1,0 +1,272 @@
+:root {
+  /* ## Colors
+
+  ### Primary */
+
+  --strong-cyan: hsl(172, 67%, 45%);
+
+  /* ### Neutral */
+
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+  --light-red: hsl(354, 100%, 66%);
+
+  /* ## Typography */
+  --ff: "Space Mono", monospace;
+  --fz: 20px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--ff);
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--light-grayish-cyan);
+  color: var(--very-dark-cyan);
+}
+
+fieldset {
+  border: 0;
+}
+
+fieldset legend {
+  color: var(--dark-grayish-cyan);
+  margin-bottom: 5px;
+}
+
+input,
+label {
+  font-size: var(--fz);
+  text-align: right;
+}
+
+input:hover,
+label:hover,
+button:hover {
+  transition: all 0.3s;
+}
+
+.error__message {
+  display: none;
+  text-align: right;
+}
+
+.danger .error__message {
+  color: var(--light-red);
+  display: block;
+  margin-top: -28px;
+}
+
+.danger .input__number {
+  border-color: var(--light-red);
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+
+.tip-calculator {
+  max-width: 920px;
+}
+
+.logo {
+  margin-bottom: 75px;
+  text-align: center;
+}
+
+.tip-calculator__content {
+  align-items: stretch;
+  background-color: var(--white);
+  border-radius: 25px;
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  padding: 30px 32px 32px 50px;
+}
+
+.tip-calculator__inputs,
+.tip-calculator__results {
+  width: 100%;
+}
+
+.tip-calculator__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  padding: 20px 0;
+}
+
+.input__number {
+  background-color: var(--very-light-grayish-cyan);
+  background-position: left 20px center;
+  background-repeat: no-repeat;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  color: var(--very-dark-cyan);
+  cursor: pointer;
+  line-height: 46px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.input__number:hover,
+.input__number:focus {
+  border: 2px solid var(--strong-cyan);
+}
+
+.input__number::placeholder {
+  color: var(--grayish-cyan);
+}
+
+.input__number--bill {
+  background-image: url("../images/icon-dollar.svg");
+}
+
+.input__number--people {
+  background-image: url("../images/icon-person.svg");
+}
+
+.options {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.tip__item--label {
+  background-color: var(--very-dark-cyan);
+  border-radius: 5px;
+  color: var(--white);
+  cursor: pointer;
+  display: block;
+  line-height: 46px;
+  text-align: center;
+}
+
+.tip__item--label:hover {
+  background-color: var(--light-grayish-cyan);
+  color: var(--very-dark-cyan);
+}
+
+.input__number--custom {
+  text-align: center;
+}
+
+.tip__item--percent {
+  appearance: none;
+  display: none;
+}
+
+.tip__item--percent:checked + .tip__item--label {
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+}
+
+.tip-calculator__results {
+  background-color: var(--very-dark-cyan);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 52px 40px 36px;
+}
+
+.results__item {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.results__item p {
+  color: var(--white);
+  font-size: 15px;
+}
+
+.results__item p span {
+  color: var(--grayish-cyan);
+  display: block;
+  font-size: 13px;
+}
+
+.results__item h2 {
+  color: var(--strong-cyan);
+  font-size: 48px;
+  line-height: 1;
+}
+
+.button__reset {
+  background-color: var(--strong-cyan);
+  border: 0;
+  border-radius: 5px;
+  color: var(--very-dark-cyan);
+  cursor: pointer;
+  font-size: var(--fz);
+  line-height: 46px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.button__reset:hover {
+  background-color: var(--light-grayish-cyan);
+}
+
+@media (max-width: 768px) {
+  .tip-calculator__content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 430px) {
+  input,
+  label {
+    font-size: 23px;
+  }
+
+  .container {
+    justify-content: flex-start;
+    padding-top: 40px;
+  }
+
+  .logo {
+    margin-bottom: 20px;
+  }
+
+  .tip-calculator__content {
+    border-radius: 25px 25px 0 0;
+    gap: 30px;
+    padding: 25px;
+  }
+
+  .tip-calculator__inputs {
+    gap: 30px;
+    padding: 10px 8px 0;
+  }
+
+  .options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tip-calculator__results {
+    padding: 22px;
+  }
+
+  .results__item {
+    margin-bottom: 30px;
+  }
+
+  .results__item h2 {
+    font-size: 38px;
+  }
+}
